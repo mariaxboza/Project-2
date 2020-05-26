@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MFrame extends JFrame {
+public class MFrame extends JFrame { // Class to create the game
 
     private ImageList images = new ImageList();
     private JPanel panel4Pic = new JPanel(new GridLayout(4,4));
@@ -15,7 +15,7 @@ public class MFrame extends JFrame {
     JButton[][] buttons = new JButton[4][4];
 
     public MFrame()
-    {
+    { // Constuctor for the frame of the game
         super("Memory");
         this.setLayout(null);
         this.setSize(1000,800);
@@ -29,7 +29,7 @@ public class MFrame extends JFrame {
     }
 
     private boolean CompareOpens()
-    {
+    { // Method to create the buttons open
         int r = opens[0] / 4;
         int c = opens[0] % 4;
 
@@ -40,7 +40,7 @@ public class MFrame extends JFrame {
     }
 
     public void createButtons()
-    {
+    { // Method to create the game buttons which will be the ones to choose
         ImageIcon[][] pics = images.getPics();
 
         for(int r = 0; r < 4; r++)
